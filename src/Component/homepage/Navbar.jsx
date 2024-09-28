@@ -6,7 +6,7 @@ import logo from './images/iinsaf.png';
 function CollapsibleExample() {
   return (
    
-    <Navbar collapseOnSelect expand="lg" style={{ position: 'sticky', top: 0, zIndex: 20 }}
+    <Navbar collapseOnSelect expand="lg"
     className="bg-body-tertiary" >
       <Container className='w-[80%]'>
         <Navbar.Brand href="/">
