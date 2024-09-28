@@ -1,0 +1,80 @@
+.hero-main {
+    margin-top: 50px;
+    text-align: center;
+    width: 100%;
+    align-items: center;
+    overflow: hidden;
+
+}
+
+.hero-shapes { 
+    position: relative;
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+
+    @media (max-width:500px) {
+        flex-direction: column;
+    }
+}
+
+.shape1 {
+    
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 414px;
+    height: 350px;
+    background: url("https://iinsaf.com/front/images/shapes/feature-s4-shape.png");
+    background-repeat: no-repeat;
+    overflow: hidden;
+
+    @media (max-width:500px) {
+        transform: rotate(90deg);
+        margin-top: 60px;
+    }
+}
+
+.shape-container {
+    
+    display: flex;
+    justify-content: center;
+    position: relative;
+    align-items: center;
+    text-align: center;
+}
+
+.shape-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 280px;
+    word-wrap: normal;
+
+    position: absolute;
+    @media (min-width:500px) {
+        left: 30px;
+    }
+}
+
+.shape2 {
+    
+    width: 342px;
+    height: 350px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url("https://iinsaf.com/front/images/shapes/feature-s4-shape2.png");
+    background-repeat: no-repeat;
+    overflow: hidden;
+
+    @media (max-width:500px) {
+        transform: rotate(90deg);
+        margin-top: 60px;
+    }
+}

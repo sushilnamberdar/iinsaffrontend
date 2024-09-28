@@ -1,3 +1,114 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.nav-link-underline {
+    position: relative;
+    color: black;
+    text-decoration: none;
+    display: inline-block;
+  }
+  
+  .nav-link-underline::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color:#007CFB;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .nav-link-underline:hover::before {
+    visibility: visible;
+    width: 100%;
+  }
+  
+  .nav-link-underline:hover {
+    color: #007CFB; /* Optional hover text color (blue-600) */
+  }
+  
+
+
+  .nav-link-shine {
+    position: relative;
+    background-color: #007CFB; /* Initial background color */
+    color: white;
+    padding: 10px 15px;
+    display: inline-block;
+    border-radius: 5px;
+    overflow: hidden;
+    z-index: 1; /* Ensure the text is above the pseudo-elements */
+    transition: background 0.5s ease-in-out, color 0.3s ease-in-out;
+  }
+  
+  .nav-link-shine::before, .nav-link-shine::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Put the pseudo-elements behind the text */
+    transition: none;
+  }
+  
+  .nav-link-shine::before {
+    background: linear-gradient(45deg, #007CFB, #00DFBD); /* Initial gradient */
+    left: -150%; /* Hidden off-screen initially */
+    transition: left 0.8s ease-in-out;
+  }
+  
+  .nav-link-shine:hover::before {
+    left: 0; /* Slide in the gradient from left to right */
+  }
+  
+  .nav-link-shine::after {
+    background: linear-gradient(45deg, violet, #00DFBD); /* Violet gradient when not hovered */
+    opacity: 0; /* Initially invisible */
+    transition: opacity 0.8s ease-in-out;
+  }
+  
+  .nav-link-shine:hover::after {
+    opacity: 1; /* Fade in after hover */
+    transition-delay: 0.8s; /* Start after the hover animation */
+  }
+  
+
+/* style.css */
+
+/* style.css */
+
+/* Container for the WhatsApp button */
+.whatsapp-button-container {
+  position: fixed; /* Fix the button to the viewport */
+        /* Position it to the left side */    /* Position it from the bottom */
+  z-index: 1000;   /* Ensure it is above other elements */
+}
+
+/* Style for the WhatsApp button */
+.email-bt {
+  background-color: #25D366; /* WhatsApp green color */
+  border-radius: 50%;         /* Make it circular */
+  width: 70px;                /* Set a width for the circle */
+  height: 70px;               /* Set a height for the circle */
+  display: flex;              /* Use flexbox for centering */
+  justify-content: center;     /* Center the icon horizontally */
+  align-items: center;        /* Center the icon vertically */
+  box-shadow: 0 8px 30px rgba(0, 211, 54, 0.9); /* Glow effect */
+  transition: box-shadow 0.3s; /* Smooth transition for hover effect */
+}
+
+/* Hover effect */
+.email-bt:hover {
+  box-shadow: 0 10px 37px rgba(0, 211, 54, 0.9); /* Stronger glow on hover */
+}
+
+/* Icon styles */
+.email-bt i {
+  color: white; /* Icon color */
+  font-size: 40px; /* Adjust icon size */
+}
+
