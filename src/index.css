@@ -121,7 +121,6 @@
     background-color: #fff; /* Background color of the navbar */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow for depth */
     z-index: 1000; /* Ensures it stays above other content */
-    padding: 10px 20px; /* Adds some padding */
   }
 
   /* Optional: Styles for the Navbar component */
@@ -137,3 +136,20 @@
         padding: 10px; /* Adjust padding on smaller screens */
     }
   }
+  .backgroundimg{
+    background-image: url(./Component/images/hero-3-shape.png);
+    
+  }
+
+
+
+.loginbgimg{
+  background-image: url(./Component/images/login2.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+
+.banner-img{
+  background-image: url(./Component/images/banner-bg.png);
+}

@@ -73,7 +73,7 @@ html {
 
 body {
   line-height: 26px;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
 }
 
 ul {
@@ -4036,7 +4036,7 @@ footer .footer-cr .footer-cr-container ul.cr-menu li:last-child {
 
 .footer-s1, .footer-s2 {
   padding-top: 120px;
-  /* background: url(../images/footer-bg.png); */
+  background: url(../../images/footer-bg.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

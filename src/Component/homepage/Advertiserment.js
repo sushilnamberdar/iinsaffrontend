@@ -37,7 +37,7 @@ const Advertiserment = () => {
                           Collaborate with selected influencers, track campaign performance, and achieve your marketing goals effectively. 
                           Pay influencers based on the agreed terms, ensuring fair compensation for their efforts.
                         </p>
-                        <a href="https://www.iinsaf.com/advertiser/" target="_blank" className="btn btn-s3">Join as Advertiser</a>
+                        <a href='/register?as=2' className="btn btn-s3">Join as Advertiser</a>
                     </div>
                 </div>
             </div>

@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import iinsafwhiteimage from './images/iinsaf-white.png'
 import AOS from 'aos';
 import 'aos/dist/aos.css'; // Import AOS styles
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
@@ -58,11 +59,11 @@ const Footer = () => {
               <div className="f-widget widget-2">
                 <h3 className="f-title">Quick Links</h3>
                 <ul className="f-menu">
-                  <li><a href="index.aspx">Homepage</a></li>
-                  <li><a href="about.aspx">About Us</a></li>
-                  <li><a href="faqs.aspx">Faqs</a></li>
-                  <li><a href="../social/">Join as Reporter</a></li>
-                  <li><a href="../advertiser/">Join as Advertiser</a></li>
+                  <li><Link  to={"/"}>Homepage</Link></li>
+                  <li><Link to="/about">About Us</Link></li>
+                  <li><Link to="/faqs">Faqs</Link></li>
+                  <li><Link to="/register?as=1">Join as Reporter</Link></li>
+                  <li><Link to="/register?as=2">Join as Advertiser</Link></li>
                 </ul>
               </div>
             </div>
@@ -71,10 +72,10 @@ const Footer = () => {
               <div className="f-widget widget-3">
                 <h3 className="f-title">Privacy Links</h3>
                 <ul className="f-menu">
-                  <li><a href="terms-and-conditions.aspx">Terms and Conditions</a></li>
-                  <li><a href="privacy-policy.aspx">Privacy Policy</a></li>
-                  <li><a href="refund-policy.aspx">Refund Policy</a></li>
-                  <li><a href="disclaimer.aspx">Disclaimer</a></li>
+                  <li><Link to={'/privacy'}>Terms and Conditions</Link></li>
+                  <li><Link to={'/privacypolicy'}>Privacy Policy</Link></li>
+                  <li><Link to={'/refundpolicy'}>Refund Policy</Link></li>
+                  <li><Link to={'/desclamer'}>Disclaimer</Link></li>
                 </ul>
               </div>
             </div>

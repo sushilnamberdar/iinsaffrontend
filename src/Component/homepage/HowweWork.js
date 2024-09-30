@@ -2,7 +2,7 @@ import React from 'react'
 
 const HowweWork = () => {
     return (
-        <div className='mt-10' >
+        <div className='mt-10 cs:hidden' >
             <h4 style={{ color: "blue" }} data-aos="zoom-in" >How We Work</h4>
 
             <h3>Our Work Process</h3>
