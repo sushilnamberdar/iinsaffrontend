@@ -15,6 +15,12 @@ import TreamsAndCondition from './Component/PrivacyLinks/TreamsAndCondition';
 import PrivacyPolicy from './Component/PrivacyLinks/PrivacyPolicy';
 import RefundPolicy from './Component/PrivacyLinks/RefundPolicy';
 import Desclamer from './Component/PrivacyLinks/Desclamer';
+import UserDashboard from './Component/User/UserDashboard';
+import Leads from './Component/User/Leads';
+import RelevantLeads from './Component/User/ReleventLeads';
+import PendingLeads from './Component/User/PandingLeads'
+import AcceptedLeads from './Component/User/AcceptedLeads';
+import CompletedLeads from './Component/User/CompletedLeads';
 
 function App() {
   return (
@@ -35,6 +41,12 @@ function App() {
           <Route path='/privacypolicy' element={<PrivacyPolicy/>} />
           <Route path='/refundpolicy' element={<RefundPolicy/>} />
           <Route path='/desclamer' element={<Desclamer/>} />
+          <Route path='/userDashboard' element={<UserDashboard/>}/>
+          <Route path='/userleads' element={<Leads/>} />
+          <Route path='/userrelaventleads' element={<RelevantLeads/>}/>
+          <Route path='/userpandingleads' element={<PendingLeads/>} />
+          <Route path='/useracceptedleads' element={<AcceptedLeads/>} />
+          <Route path='/usercompletedleads' element={<CompletedLeads/>} />
         </Routes>
         <Footer />
       {/* </Router> */}
