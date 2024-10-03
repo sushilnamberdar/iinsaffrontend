@@ -15,11 +15,9 @@ const RelevantLeads = () => {
         { id: 10, date: '2024-10-10', location: 'San Jose', viewsRequired: 550, adType: 'Banner', adLength: '30 sec', maxAmount: '$700' },
     ];
 
-
-    useEffect(()=>{
-        document.title='Relevent Leads'
-    },[])
-
+    useEffect(() => {
+        document.title = 'Relevant Leads';
+    }, []);
 
     // Pagination state
     const [currentPage, setCurrentPage] = useState(1);
@@ -48,12 +46,12 @@ const RelevantLeads = () => {
 
     return (
         <div className="p-5 bg-gray-50 rounded-lg shadow-md bg-gradient-to-r from-[#ecf5ff] to-[#d1edc4]">
-            <div className="flex items-center justify-between mb-4">
+            <div className="flex flex-col md:flex-row md:items-center justify-between mb-4">
                 <h5 className="text-xl font-semibold">Relevant Leads</h5>
-                <div className="flex space-x-2">
+                <div className="flex space-x-2 mt-4 md:mt-0">
                     <input
                         type="text"
-                        className="border border-gray-300 rounded-lg p-2 w-64"
+                        className="border border-gray-300 rounded-lg p-2 w-full md:w-64"
                         placeholder="Search Here"
                     />
                     <button className="btn btn-primary bg-blue-500 text-white px-4 py-2 rounded">Search</button>
@@ -98,7 +96,7 @@ const RelevantLeads = () => {
             </div>
 
             {/* Pagination Controls */}
-            <div className="flex justify-between mt-4">
+            <div className="flex flex-col md:flex-row justify-between mt-4">
                 <button
                     onClick={prevPage}
                     className={`px-4 py-2 text-white rounded ${currentPage === 1 ? 'bg-gray-400 cursor-not-allowed' : 'bg-blue-500 hover:bg-blue-600'}`}
@@ -106,7 +104,7 @@ const RelevantLeads = () => {
                 >
                     Previous
                 </button>
-                <span className="self-center">Page {currentPage} of {totalPages}</span>
+                <span className="self-center mt-2 md:mt-0">Page {currentPage} of {totalPages}</span>
                 <button
                     onClick={nextPage}
                     className={`px-4 py-2 text-white rounded ${currentPage === totalPages ? 'bg-gray-400 cursor-not-allowed' : 'bg-blue-500 hover:bg-blue-600'}`}

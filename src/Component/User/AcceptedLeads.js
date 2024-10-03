@@ -15,15 +15,11 @@ const AcceptedLeads = () => {
         { id: 10, acceptedDate: '2024-09-30', viewsRequired: 500, maxAmount: '$900', receivedViews: 470, per1000Amt: '$1.80', status: 'Accepted' },
     ];
 
-    
-    useEffect(()=> {
-        document.title="Accepted Leads"
-    },[])
-    
-    
+    useEffect(() => {
+        document.title = "Accepted Leads";
+    }, []);
+
     // Pagination state
-
-
     const [currentPage, setCurrentPage] = useState(1);
     const leadsPerPage = 5; // Number of leads per page
 
@@ -50,15 +46,15 @@ const AcceptedLeads = () => {
 
     return (
         <div className="p-5 bg-gray-50 rounded-lg shadow-md bg-gradient-to-r from-[#ecf5ff] to-[#d1edc4]">
-            <div className="flex items-center justify-between mb-4">
+            <div className="flex flex-col sm:flex-row items-center justify-between mb-4">
                 <h5 className="text-xl font-semibold">Accepted Leads</h5>
-                <div className="flex space-x-2">
+                <div className="flex flex-col sm:flex-row space-x-0 sm:space-x-2 mt-2 sm:mt-0">
                     <input
                         type="text"
-                        className="border border-gray-300 rounded-lg p-2 w-64"
+                        className="border border-gray-300 rounded-lg p-2 w-full sm:w-64"
                         placeholder="Search Here"
                     />
-                    <button className="btn btn-primary bg-blue-500 text-white px-4 py-2 rounded">Search</button>
+                    <button className="btn btn-primary bg-blue-500 text-white px-4 py-2 rounded mt-2 sm:mt-0">Search</button>
                 </div>
             </div>
 
@@ -96,7 +92,7 @@ const AcceptedLeads = () => {
             </div>
 
             {/* Pagination Controls */}
-            <div className="flex justify-between mt-4">
+            <div className="flex flex-col sm:flex-row justify-between mt-4">
                 <button
                     onClick={prevPage}
                     className={`px-4 py-2 text-white rounded ${currentPage === 1 ? 'bg-gray-400 cursor-not-allowed' : 'bg-blue-500 hover:bg-blue-600'}`}
@@ -104,7 +100,7 @@ const AcceptedLeads = () => {
                 >
                     Previous
                 </button>
-                <span className="self-center">Page {currentPage} of {totalPages}</span>
+                <span className="self-center mt-2 sm:mt-0">Page {currentPage} of {totalPages}</span>
                 <button
                     onClick={nextPage}
                     className={`px-4 py-2 text-white rounded ${currentPage === totalPages ? 'bg-gray-400 cursor-not-allowed' : 'bg-blue-500 hover:bg-blue-600'}`}

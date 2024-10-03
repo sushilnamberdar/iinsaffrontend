@@ -15,15 +15,20 @@ import NewseReporter from './NewseReporter';
 import Advertiserment from './Advertiserment';
 import Videoshowing from './Videoshowing';
 import WhatsAppButton from './Whatsappbutton';
+import { useNavigate } from 'react-router-dom';
 
 const Hero = () => {
     // Initialize AOS on component mount
+    const navigate  = useNavigate();
     useEffect(() => {
         AOS.init({
             duration: 1000, // Animation duration
             once: true,     // Whether animation should happen only once
         });
     }, []);
+
+
+      
 
     return (
         <div className='hero-main min-h-screen'>

@@ -15,10 +15,9 @@ const PendingLeads = () => {
         { id: 10, acceptedDate: '2024-10-10', viewsRequired: 550, maxAmount: '$700', receivedViews: 500, per1000Amt: '$1.40', status: 'Pending' },
     ];
 
-    
-    useEffect(()=> {
-        document.title="Panding Leads"
-    },[])
+    useEffect(() => {
+        document.title = "Pending Leads";
+    }, []);
 
     // Pagination state
     const [currentPage, setCurrentPage] = useState(1);
@@ -47,12 +46,12 @@ const PendingLeads = () => {
 
     return (
         <div className="p-5 bg-gray-50 rounded-lg shadow-md bg-gradient-to-r from-[#ecf5ff] to-[#d1edc4]">
-            <div className="flex items-center justify-between mb-4">
+            <div className="flex flex-col md:flex-row md:items-center justify-between mb-4">
                 <h5 className="text-xl font-semibold">Pending Leads</h5>
-                <div className="flex space-x-2">
+                <div className="flex space-x-2 mt-4 md:mt-0">
                     <input
                         type="text"
-                        className="border border-gray-300 rounded-lg p-2 w-64"
+                        className="border border-gray-300 rounded-lg p-2 w-full md:w-64"
                         placeholder="Search Here"
                     />
                     <button className="btn btn-primary bg-blue-500 text-white px-4 py-2 rounded">Search</button>
@@ -63,14 +62,14 @@ const PendingLeads = () => {
                 <table className="min-w-full bg-white border border-gray-300 rounded-lg shadow-md">
                     <thead>
                         <tr className="bg-gray-200 text-gray-700">
-                            <th className="py-2 px-4">Lead Id</th>
-                            <th className="py-2 px-4">Accepted Date</th>
-                            <th className="py-2 px-4">Required Views</th>
-                            <th className="py-2 px-4">Max. Amount</th>
-                            <th className="py-2 px-4">Received Views</th>
-                            <th className="py-2 px-4">Per/1000 Amt.</th>
-                            <th className="py-2 px-4">Status</th>
-                            <th className="py-2 px-4">View</th>
+                            <th className="py-2 px-4 text-left">Lead Id</th>
+                            <th className="py-2 px-4 text-left">Accepted Date</th>
+                            <th className="py-2 px-4 text-left">Required Views</th>
+                            <th className="py-2 px-4 text-left">Max. Amount</th>
+                            <th className="py-2 px-4 text-left">Received Views</th>
+                            <th className="py-2 px-4 text-left">Per/1000 Amt.</th>
+                            <th className="py-2 px-4 text-left">Status</th>
+                            <th className="py-2 px-4 text-left">View</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -93,7 +92,7 @@ const PendingLeads = () => {
             </div>
 
             {/* Pagination Controls */}
-            <div className="flex justify-between mt-4">
+            <div className="flex flex-col md:flex-row justify-between mt-4">
                 <button
                     onClick={prevPage}
                     className={`px-4 py-2 text-white rounded ${currentPage === 1 ? 'bg-gray-400 cursor-not-allowed' : 'bg-blue-500 hover:bg-blue-600'}`}
@@ -101,7 +100,7 @@ const PendingLeads = () => {
                 >
                     Previous
                 </button>
-                <span className="self-center">Page {currentPage} of {totalPages}</span>
+                <span className="self-center mt-2 md:mt-0">Page {currentPage} of {totalPages}</span>
                 <button
                     onClick={nextPage}
                     className={`px-4 py-2 text-white rounded ${currentPage === totalPages ? 'bg-gray-400 cursor-not-allowed' : 'bg-blue-500 hover:bg-blue-600'}`}

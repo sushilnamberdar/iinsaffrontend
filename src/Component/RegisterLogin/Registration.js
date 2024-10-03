@@ -4,7 +4,8 @@ import { BiUser, BiEnvelope, BiPhone, BiMapPin, BiKey, BiShow, BiHide } from 're
 import { Link, useSearchParams } from 'react-router-dom';
 import { BaseUrl } from '../util/util';
 import { toast, ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css'; // Import styles
+import 'react-toastify/dist/ReactToastify.css'; 
+import  { useNavigate } from 'react-router-dom';
 
 
 const Registration = () => {
@@ -20,6 +21,14 @@ const Registration = () => {
   const [password, setPassword] = useState(''); // Track the 'Password' value
   const [confirmPassword, setConfirmPassword] = useState(''); // Track the 'Confirm Password
   const [gender, setGender] = useState('');
+   
+  const navigate = useNavigate();
+
+  useEffect(()=> {
+    const  token =  localStorage.getItem('authToken');
+      navigate('/userdashboard');
+      
+  },[]);
 
   useEffect(()=> {
     document.title = 'Registration'
