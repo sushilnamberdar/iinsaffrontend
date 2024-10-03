@@ -1,5 +1,6 @@
 import React from 'react';
 import image from './images/reporter.jpg'
+import { Link } from 'react-router-dom';
 
 const NewseReporter = () => {
   return (
@@ -26,7 +27,7 @@ const NewseReporter = () => {
                 <p style={{ textAlign: 'justify' }}>
                   Accept opportunities, create content as required, and earn compensation based on your performance. A small commission is deducted, and the remaining amount is credited to your account.
                 </p>
-                <a href="/register?as=1"rel="noopener noreferrer" className="btn btn-s3">Join as Reporter</a>
+                <Link to="/register?as=1"rel="noopener noreferrer" className="btn btn-s3">Join as Reporter</Link>
               </div>
             </div>
             <div className="col-xl-5 col-lg-6">

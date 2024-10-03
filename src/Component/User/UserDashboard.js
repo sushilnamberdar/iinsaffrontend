@@ -17,27 +17,7 @@ import PaymentWithdraw from './PaymentWithdraw'
 const UserDashboard = () => {
   return (
     <div>
-     <Dashboard/>
-
-     {/* LEADS */}
-     <Leads/>
-     <RelevantLeads/>
-     <PendingLeads/>
-     <AcceptedLeads/>
-     <CompletedLeads/>
-
-     {/* CONFERENCES  */}
-      <Conferences/>
-      <PendingConferences/>
-      <AcceptedConferences/>
-      <CompletedConferences/>
-
-      {/* PAYMENT  */}
-      <LeadsEarnings/>
-      <ConferencesEarnings/>
-      <PaymentWithdraw/>
-      <WithdrawalHistory/>
-  
+     <Dashboard/>  
     </div>
   )
 }

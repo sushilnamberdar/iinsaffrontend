@@ -54,8 +54,8 @@ function App() {
           <Route path='/desclamer' element={<Desclamer/>} />
           <Route path='/userDashboard' element={<UserDashboard/>}/>
           <Route path='/userleads' element={<Leads/>} />
-          <Route path='/userrelaventleads' element={<RelevantLeads/>}/>
-          <Route path='/userpandingleads' element={<PendingLeads/>} />
+          <Route path='/userreleventleads' element={<RelevantLeads/>}/>
+          <Route path='/userpendingleads' element={<PendingLeads/>} />
           <Route path='/useracceptedleads' element={<AcceptedLeads/>} />
           <Route path='/usercompletedleads' element={<CompletedLeads/>} />
           <Route path='/usercontect' element={<UserContactUs/>} />

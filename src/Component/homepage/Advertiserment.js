@@ -1,5 +1,6 @@
 import React from 'react';
 import advertiser from './images/advertiser.jpg'
+import { Link } from 'react-router-dom';
 
 const Advertiserment = () => {
   return (
@@ -37,7 +38,7 @@ const Advertiserment = () => {
                           Collaborate with selected influencers, track campaign performance, and achieve your marketing goals effectively. 
                           Pay influencers based on the agreed terms, ensuring fair compensation for their efforts.
                         </p>
-                        <a href='/register?as=2' className="btn btn-s3">Join as Advertiser</a>
+                        <Link to='/register?as=2' className="btn btn-s3">Join as Advertiser</Link>
                     </div>
                 </div>
             </div>

@@ -68,6 +68,12 @@ const Login = () => {
     }
   };
 
+  useEffect(()=> {
+    const token  = localStorage.getItem('authToken');
+    if(token){
+      navigate('/userdashboard');
+    }
+  })
 
   return (
     <div className="flex items-center justify-center min-h-screen bg-gray-100 loginbgimg">
